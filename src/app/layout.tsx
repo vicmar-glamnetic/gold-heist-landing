@@ -12,7 +12,7 @@ const description =
   "Access elite gold trading strategies, unlimited VIP signals (87% win rate), live Discord sessions, and free mentorship. No subscriptions — funded by institutional rebates through our ACCM partnership.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ghttrading.co"),
+  metadataBase: new URL("https://www.ghttrading.co"),
   title,
   description,
   keywords: [
@@ -27,16 +27,15 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: "https://ghttrading.co",
+    url: "https://www.ghttrading.co",
     siteName: "Gold Heist Trading",
     type: "website",
-    images: [{ url: "/logo.png", width: 180, height: 180, alt: "Gold Heist Trading" }],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/logo.png"],
   },
   icons: {
     icon: "/logo.png",
