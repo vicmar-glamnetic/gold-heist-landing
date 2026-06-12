@@ -1,0 +1,31 @@
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Ticker } from "@/components/Ticker";
+import { RecentResults } from "@/components/RecentResults";
+import { WhyFree } from "@/components/WhyFree";
+import { Steps } from "@/components/Steps";
+import { Bonus } from "@/components/Bonus";
+import { Videos } from "@/components/Videos";
+import { Team } from "@/components/Team";
+import { Connect } from "@/components/Connect";
+import { Footer } from "@/components/Footer";
+import { RegisterModal } from "@/components/RegisterModal";
+
+export default function Home() {
+  return (
+    <main>
+      <RegisterModal />
+      <Navbar />
+      <Hero />
+      <Ticker />
+      <RecentResults />
+      <WhyFree />
+      <Steps />
+      <Bonus />
+      <Videos />
+      <Team />
+      <Connect />
+      <Footer />
+    </main>
+  );
+}

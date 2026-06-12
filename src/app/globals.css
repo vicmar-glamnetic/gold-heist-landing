@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07070a;
+  --color-ink-2: #0d0d12;
+  --color-panel: #121218;
+  --color-line: #21212b;
+  --color-gold: #ad9045;
+  --color-gold-soft: #d4b159;
+  --color-gold-deep: #8a7234;
+  --color-muted: #9a9aa6;
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-ink);
+  color: #f5f5f7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(120deg, #d4b159 0%, #ad9045 45%, #8a7234 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle moving aurora glow behind hero */
+.aurora {
+  background:
+    radial-gradient(40% 50% at 20% 10%, rgba(173, 144, 69, 0.2), transparent 60%),
+    radial-gradient(45% 55% at 85% 20%, rgba(138, 114, 52, 0.16), transparent 60%),
+    radial-gradient(60% 60% at 50% 100%, rgba(173, 144, 69, 0.1), transparent 70%);
+}
+
+/* Faint grid overlay */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.card-glow {
+  box-shadow: 0 0 0 1px var(--color-line), 0 24px 60px -30px rgba(173, 144, 69, 0.3);
+}
+
+@keyframes float-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  animation: float-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes chart-draw {
+  from { stroke-dashoffset: 1600; }
+  to { stroke-dashoffset: 0; }
+}
+.animate-chart {
+  stroke-dasharray: 1600;
+  animation: chart-draw 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes blip {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.animate-blip {
+  animation: blip 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  70% { transform: scale(1.6); opacity: 0; }
+  100% { opacity: 0; }
+}
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--color-gold);
+  animation: pulse-ring 2.2s ease-out infinite;
+}
