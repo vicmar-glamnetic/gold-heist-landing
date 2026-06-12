@@ -16,14 +16,16 @@ export type GoldData = {
 
 // Primary source: Binance PAXG/USDT (Pax Gold — 1 token = 1 troy oz of gold).
 // Tracks live spot gold and gives reliable intraday OHLC candles, no API key.
+// Uses the public data mirror (data-api.binance.vision), which — unlike
+// api.binance.com — is not geo/cloud-IP blocked, so it works from Vercel.
 async function fromBinance(): Promise<GoldData | null> {
   try {
+    const base = "https://data-api.binance.vision/api/v3";
     const [klinesRes, tickerRes] = await Promise.all([
-      fetch(
-        "https://api.binance.com/api/v3/klines?symbol=PAXGUSDT&interval=15m&limit=32",
-        { next: { revalidate: 60 } }
-      ),
-      fetch("https://api.binance.com/api/v3/ticker/24hr?symbol=PAXGUSDT", {
+      fetch(`${base}/klines?symbol=PAXGUSDT&interval=15m&limit=32`, {
+        next: { revalidate: 60 },
+      }),
+      fetch(`${base}/ticker/24hr?symbol=PAXGUSDT`, {
         next: { revalidate: 60 },
       }),
     ]);
