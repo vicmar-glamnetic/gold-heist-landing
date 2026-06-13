@@ -19,7 +19,7 @@ export function Hero() {
                 <span className="pulse-ring absolute inset-0 h-2 w-2 rounded-full" />
                 <span className="h-2 w-2 rounded-full bg-gold" />
               </span>
-              <span className="min-w-0">Live sessions twice a day · {SESSION_TIME}</span>
+              <span className="min-w-0">Live session once a day · {SESSION_TIME}</span>
             </div>
 
             <h1 className="reveal text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">

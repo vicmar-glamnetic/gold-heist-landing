@@ -22,14 +22,14 @@ export const SOCIAL = {
 
 export const STATS = [
   { value: "87%", label: "Signal Win Rate" },
-  { value: "2×", label: "Live Sessions / Day" },
+  { value: "1×", label: "Live Session / Day" },
   { value: "$0", label: "Subscription Cost" },
   { value: "<5 min", label: "Setup Time" },
 ] as const;
 
 export const PERKS = [
   "Unlimited VIP gold signals",
-  "Live Discord trading sessions, twice daily",
+  "Live Discord trading sessions, once daily",
   "Free education & 1-on-1 mentorship",
   "Real-time market breakdowns & updates",
 ] as const;
