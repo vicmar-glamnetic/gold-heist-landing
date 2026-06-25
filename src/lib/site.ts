@@ -10,6 +10,7 @@ export const REGISTER_LINKS = {
   pogs: "https://accm.global/account/register?shareUserSetId=e243bf78b50b4c618",
   maku: "https://accm.global/account/register?shareUserSetId=6082c353a44746179",
   wayne: "https://accm.global/account/register?shareUserSetId=fc44bb6fc65145389",
+  ernest: "https://m.accm.global/account/register?shareUserSetId=b6900f2aba2b461c9",
 } as const;
 
 // Primary CTA used across the site.
@@ -70,6 +71,7 @@ export const TEAM: TeamMember[] = [
   { name: "Pogs", role: "Founder", register: REGISTER_LINKS.pogs },
   { name: "Ian", role: "Founder", register: REGISTER_LINKS.ian },
   { name: "Kerby", role: "Founder", register: REGISTER_LINKS.kerby },
+  { name: "Ernest", role: "Founder", register: REGISTER_LINKS.ernest },
   { name: "Maku", role: "Co-Founder", register: REGISTER_LINKS.maku },
   { name: "Jake", role: "Co-Founder", register: REGISTER_LINKS.jake },
   { name: "Wayne", role: "Co-Founder", register: REGISTER_LINKS.wayne },
