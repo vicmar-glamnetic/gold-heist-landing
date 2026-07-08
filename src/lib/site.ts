@@ -5,7 +5,6 @@ export const REGISTER_LINKS = {
   kyle: "https://m.accm.global/account/register?shareUserSetId=24e5369694f849bf9",
   angel: "https://m.accm.global/account/register?shareUserSetId=ddde72ad9ac5472b9",
   ian: "https://accm.global/account/register?shareUserSetId=cf4000db26724ca4b",
-  jake: "https://accm.global/account/register?shareUserSetId=a91a2d7590844ee79",
   kerby: "https://accm.global/account/register?shareUserSetId=dddd695451e14cf18",
   pogs: "https://accm.global/account/register?shareUserSetId=e243bf78b50b4c618",
   maku: "https://accm.global/account/register?shareUserSetId=6082c353a44746179",
@@ -20,6 +19,9 @@ export const SOCIAL = {
   facebook: "https://www.facebook.com/GoldHeistTraders.PH",
   discord: "https://discord.com/invite/sumNAN88H",
 } as const;
+
+// Member community platform.
+export const COMMUNITY_URL = "https://community.ghttrading.co";
 
 export const STATS = [
   { value: "87%", label: "Signal Win Rate" },
@@ -54,9 +56,9 @@ export const STEPS = [
 ] as const;
 
 export const VIDEOS = [
-  { id: "v-shkiI4C6o", title: "Inside the Gold Heist community" },
-  { id: "HvZ4L-SHgis", title: "How our free VIP signals work" },
-  { id: "FSdrvNH6jSE", title: "Getting started, step by step" },
+  { id: "v-shkiI4C6o", title: "How to make an ACCM account" },
+  { id: "HvZ4L-SHgis", title: "How to deposit using ACCM" },
+  { id: "FSdrvNH6jSE", title: "How to connect ACCM to MT5" },
 ] as const;
 
 export type TeamMember = {
@@ -73,7 +75,7 @@ export const TEAM: TeamMember[] = [
   { name: "Kerby", role: "Founder", register: REGISTER_LINKS.kerby },
   { name: "Ernest", role: "Founder", register: REGISTER_LINKS.ernest },
   { name: "Maku", role: "Co-Founder", register: REGISTER_LINKS.maku },
-  { name: "Jake", role: "Co-Founder", register: REGISTER_LINKS.jake },
+  { name: "Vicmar", role: "Co-Founder" },
   { name: "Wayne", role: "Co-Founder", register: REGISTER_LINKS.wayne },
   { name: "Roselle", role: "ACCM Manager" },
 ];

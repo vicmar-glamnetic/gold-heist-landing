@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { SOCIAL } from "@/lib/site";
+import { SOCIAL, COMMUNITY_URL } from "@/lib/site";
 import { RegisterButton } from "./RegisterButton";
 import { FacebookIcon, DiscordIcon } from "./BrandIcons";
 
@@ -40,6 +40,34 @@ export function Connect() {
             <RegisterButton className="px-8 py-4 text-base">
               Register Free in 5 Minutes
             </RegisterButton>
+          </div>
+
+          {/* Member community platform */}
+          <div className="mx-auto mt-8 max-w-xl rounded-2xl border border-gold/25 bg-gold/5 p-6">
+            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              GHT Community Platform
+            </div>
+            <p className="mx-auto mt-2 max-w-md text-sm text-muted">
+              Live signals, copy-to-MT5 trade ideas, TradingView charts, live
+              webinars &amp; education — all in one members&apos; app.
+            </p>
+            <div className="mt-5 flex justify-center">
+              <Link
+                href={COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-gold-soft to-gold-deep px-7 py-3 text-sm font-bold text-ink transition-transform hover:-translate-y-0.5"
+              >
+                Open the Community <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <p className="mt-4 text-xs text-muted">
+              <span className="font-semibold text-white">Free for ACCM members</span>
+              {" · "}
+              <span className="text-white">$5/mo</span> for other brokers
+              {" · "}
+              7-day free trial
+            </p>
           </div>
 
           <div className="mx-auto mt-10 grid max-w-xl gap-4 sm:grid-cols-2">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { RegisterButton } from "./RegisterButton";
+import { COMMUNITY_URL } from "@/lib/site";
 
 const NAV = [
   { label: "Why Free", href: "#why-free" },
@@ -39,6 +40,16 @@ export function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href={COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-gold transition-colors hover:text-white"
+            >
+              Community
+            </Link>
+          </li>
         </ul>
 
         <div className="hidden shrink-0 sm:block">
