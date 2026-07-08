@@ -18,7 +18,7 @@ export const PRIMARY_REGISTER = REGISTER_LINKS.kyle;
 
 export const SOCIAL = {
   facebook: "https://www.facebook.com/GoldHeistTraders.PH",
-  discord: "https://discord.com/invite/sumNAN88H",
+  discord: "https://discord.gg/Vzj8MNwvH",
 } as const;
 
 // Member community platform.
