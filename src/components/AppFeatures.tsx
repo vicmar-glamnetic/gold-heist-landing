@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { COMMUNITY_URL } from "@/lib/site";
 import { SectionHeading } from "./Section";
+import { AppScreens } from "./AppScreens";
 
 const FEATURES = [
   {
@@ -74,7 +75,9 @@ export function AppFeatures() {
           subtitle="GHT Community is our members' platform — signals, tools, education, and coaches, on desktop and on your phone."
         />
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <AppScreens />
+
+        <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f) => (
             <div
               key={f.title}
