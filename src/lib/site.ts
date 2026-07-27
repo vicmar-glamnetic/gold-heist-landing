@@ -1,20 +1,25 @@
 // Central content + config for the Gold Heist Trading landing page.
 // Scraped and modernized from the original ghttrading.co (carrd.co) site.
 
+// Every registration gateway on the site currently routes through Vicmar.
+// The per-member keys are kept so individual links can be restored later.
+const VICMAR_REGISTER =
+  "https://accm.global/account/register?shareUserSetId=e7b60f12f2c943449";
+
 export const REGISTER_LINKS = {
-  kyle: "https://m.accm.global/account/register?shareUserSetId=24e5369694f849bf9",
-  angel: "https://m.accm.global/account/register?shareUserSetId=ddde72ad9ac5472b9",
-  ian: "https://accm.global/account/register?shareUserSetId=cf4000db26724ca4b",
-  kerby: "https://accm.global/account/register?shareUserSetId=dddd695451e14cf18",
-  pogs: "https://accm.global/account/register?shareUserSetId=e243bf78b50b4c618",
-  maku: "https://accm.global/account/register?shareUserSetId=6082c353a44746179",
-  wayne: "https://accm.global/account/register?shareUserSetId=fc44bb6fc65145389",
-  ernest: "https://m.accm.global/account/register?shareUserSetId=b6900f2aba2b461c9",
-  vicmar: "https://accm.global/account/register?shareUserSetId=55d80c5becfd46ccb",
+  kyle: VICMAR_REGISTER,
+  angel: VICMAR_REGISTER,
+  ian: VICMAR_REGISTER,
+  kerby: VICMAR_REGISTER,
+  pogs: VICMAR_REGISTER,
+  maku: VICMAR_REGISTER,
+  wayne: VICMAR_REGISTER,
+  ernest: VICMAR_REGISTER,
+  vicmar: VICMAR_REGISTER,
 } as const;
 
 // Primary CTA used across the site.
-export const PRIMARY_REGISTER = REGISTER_LINKS.kyle;
+export const PRIMARY_REGISTER = VICMAR_REGISTER;
 
 export const SOCIAL = {
   facebook: "https://www.facebook.com/GoldHeistTraders.PH",
@@ -70,13 +75,13 @@ export type TeamMember = {
 
 export const TEAM: TeamMember[] = [
   { name: "Kyle", role: "Founder", register: REGISTER_LINKS.kyle },
+  { name: "Vicmar", role: "Co-Founder", register: REGISTER_LINKS.vicmar },
   { name: "Angel", role: "Founder", register: REGISTER_LINKS.angel },
   { name: "Pogs", role: "Founder", register: REGISTER_LINKS.pogs },
   { name: "Ian", role: "Founder", register: REGISTER_LINKS.ian },
   { name: "Kerby", role: "Founder", register: REGISTER_LINKS.kerby },
   { name: "Ernest", role: "Founder", register: REGISTER_LINKS.ernest },
   { name: "Maku", role: "Co-Founder", register: REGISTER_LINKS.maku },
-  { name: "Vicmar", role: "Co-Founder", register: REGISTER_LINKS.vicmar },
   { name: "Wayne", role: "Co-Founder", register: REGISTER_LINKS.wayne },
   { name: "Roselle", role: "ACCM Manager" },
 ];
