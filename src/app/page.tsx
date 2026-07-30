@@ -10,12 +10,10 @@ import { AppFeatures } from "@/components/AppFeatures";
 import { Team } from "@/components/Team";
 import { Connect } from "@/components/Connect";
 import { Footer } from "@/components/Footer";
-import { RegisterModal } from "@/components/RegisterModal";
 
 export default function Home() {
   return (
     <main>
-      <RegisterModal />
       <Navbar />
       <Hero />
       <Ticker />
