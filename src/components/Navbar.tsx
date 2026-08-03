@@ -4,7 +4,6 @@ import { RegisterButton } from "./RegisterButton";
 import { COMMUNITY_URL } from "@/lib/site";
 
 const NAV = [
-  { label: "Why Free", href: "#why-free" },
   { label: "Get Started", href: "#start" },
   { label: "Bonus", href: "#bonus" },
   { label: "Inside", href: "#videos" },
